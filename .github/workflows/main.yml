@@ -1,0 +1,7 @@
+  name: seal cli
+  uses: seal-community/cli-action@latest
+  with:
+    mode: fix
+    fix_mode: all
+    token: <token> # replace with a token to the artifact server
+    project: <project-id> # replace with the ID of the project
