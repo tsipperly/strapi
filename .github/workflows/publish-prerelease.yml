@@ -13,13 +13,13 @@ permissions:
 jobs:
   publish:
     name: 'Publish'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     if: github.repository == 'strapi/strapi'
     steps:
       - uses: actions/checkout@v4
       - name: Setup npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-      - uses: actions/setup-node@v4
+      - uses: useblacksmith/setup-node@v5
         with:
           node-version: 20
       - run: yarn
