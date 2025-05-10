@@ -15,16 +15,16 @@ on:
 
 jobs:
   check-pr-status:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/check-pr-status
 
   security-lockfile-analysis:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: useblacksmith/setup-node@v5
       - uses: ./.github/actions/security/lockfile
         with:
           allowedHosts: 'yarn'
