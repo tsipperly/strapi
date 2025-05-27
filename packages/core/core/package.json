@@ -75,7 +75,7 @@
     "debug": "4.3.4",
     "delegates": "1.0.0",
     "dotenv": "16.4.5",
-    "execa": "5.1.1",
+    "execa": "9.6.0",
     "fs-extra": "11.2.0",
     "glob": "10.3.10",
     "global-agent": "3.0.0",
